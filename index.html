@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Встановіть додаток Ощад</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      color: #004e27;
+    }
+    .button {
+      display: inline-block;
+      margin: 15px;
+      padding: 15px 25px;
+      font-size: 18px;
+      color: #fff;
+      background-color: #007a33;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .button:hover {
+      background-color: #005e26;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Встановіть мобільний додаток Ощад</h1>
+  <p>Виберіть версію для свого пристрою:</p>
+
+  <a href="https://play.google.com/store/apps/details?id=ua.oschadbank.flumo" class="button">Завантажити для Android</a>
+  <a href="https://apps.apple.com/ua/app/ощад/id1571479928?l=uk" class="button">Завантажити для iPhone</a>
+
+  <script>
+    const userAgent = navigator.userAgent  navigator.vendor  window.opera;
+
+    if (/android/i.test(userAgent)) {
+      window.location.href = "https://play.google.com/store/apps/details?id=ua.oschadbank.flumo";
+    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      window.location.href = "https://apps.apple.com/ua/app/ощад/id1571479928?l=uk";
+    }
+  </script>
+
+</body>
+</html>
